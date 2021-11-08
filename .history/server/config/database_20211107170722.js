@@ -7,15 +7,12 @@
  * @author 
  * @author 
  * @author 
- * @author Wen Sophie Xu (301098127)
+ * @author Sophie Xu (301098127)
  * @author 
  * @author 
  * @author
  */
 
-/**
- * Configure and connect to the MongoDB provider using mongoose
- */
  "use strict";
  Object.defineProperty(exports, "__esModule", { value: true });
  exports.Secret = exports.HostName = exports.RemoteURI= void 0;

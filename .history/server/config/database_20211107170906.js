@@ -7,7 +7,7 @@
  * @author 
  * @author 
  * @author 
- * @author Wen Sophie Xu (301098127)
+ * @author Sophie Xu (301098127)
  * @author 
  * @author 
  * @author
