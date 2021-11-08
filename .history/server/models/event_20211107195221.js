@@ -7,7 +7,6 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const Schema = mongoose_1.default.Schema;
 const EventSchema = new Schema
 ({
-    _id: Types.ObjectId,
     eventName: 
     {
         type:String,
@@ -20,13 +19,7 @@ const EventSchema = new Schema
         required:true
     },
 
-    eventStartTime:
-    {
-        type:Date,
-        required:true
-    },
-
-    eventEndTime:
+    eventDate:
     {
         type:Date,
         required:true

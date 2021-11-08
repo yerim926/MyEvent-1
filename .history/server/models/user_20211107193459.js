@@ -14,7 +14,7 @@ const UserSchema = new Schema
         require:true,
 
     },
-    userName: 
+    username: 
     {
         type:  String,
         require:true,
@@ -54,31 +54,22 @@ const UserSchema = new Schema
         require:true,
 
     },
-
-    bio:
-    {
-        type:String,
-    },
-
-    savedEvent:
-    {
+    savedEvent:{
         _id: 
         {
             type: Schema.Types.ObjectId,
             required: true,
-            ref: "Event",
+            ref: "event",
         },
         default: Date.now()
 
     },
-
-    notInterestedEvent:
-    {
+    notInterestedEvent:{
         _id: 
         {
             type: Schema.Types.ObjectId,
             required: true,
-            ref: "Event",
+            ref: "event",
         },
 
         default: Date.now()
@@ -89,20 +80,11 @@ const UserSchema = new Schema
         type: Date,
         default: Date.now()
     },
-
     updated: {
         type: Date,
         default: Date.now()
-    },
-
-    type: {
-            type: String,
-            enum: ["regular user", "VIP user", "event organizer"],
-            default: "regular user",
-        },
-},
-
-{
+    }
+}, {
     collection: "users",
     timestamps: true,
 });

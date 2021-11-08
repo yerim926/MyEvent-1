@@ -9,76 +9,29 @@ const passport_local_mongoose_1 = __importDefault(require("passport-local-mongoo
 const UserSchema = new Schema
 ({
     _id:Types.ObjectId,
-    firstAndLastName:
-    {   type:String,
-        require:true,
-
-    },
-    userName: 
-    {
-        type:  String,
-        require:true,
-
-    },
-    
-    emailAddress:
-    {
-        type:String,
-        require:true,
-
-    },
-
-    Birthday:
-    {
-        type:Date,
-        require:true,
-    },
-
-    address:
-    {
-        type:String,
-        require:true,
-    },
-
-
-    city:
-    {
-        type:String,
-        require:true,
-
-    },
-
-    phoneNumber:
-    {
-        type:Number,
-        require:true,
-
-    },
-
-    bio:
-    {
-        type:String,
-    },
-
-    savedEvent:
-    {
+    firstAndLastName:String,
+    username: String,
+    emailAddress: String,
+    Birthday:Date,
+    address:String,
+    city:String,
+    phoneNumber:Number,
+    savedEvent:{
         _id: 
         {
             type: Schema.Types.ObjectId,
             required: true,
-            ref: "Event",
+            ref: "event",
         },
         default: Date.now()
 
     },
-
-    notInterestedEvent:
-    {
+    notInterestedEvent:{
         _id: 
         {
             type: Schema.Types.ObjectId,
             required: true,
-            ref: "Event",
+            ref: "event",
         },
 
         default: Date.now()
@@ -89,22 +42,12 @@ const UserSchema = new Schema
         type: Date,
         default: Date.now()
     },
-
     updated: {
         type: Date,
         default: Date.now()
-    },
-
-    type: {
-            type: String,
-            enum: ["regular user", "VIP user", "event organizer"],
-            default: "regular user",
-        },
-},
-
-{
-    collection: "users",
-    timestamps: true,
+    }
+}, {
+    collection: "users"
 });
 UserSchema.plugin(passport_local_mongoose_1.default);
 const Model = mongoose_1.default.model("User", UserSchema);

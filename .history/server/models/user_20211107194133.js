@@ -14,7 +14,7 @@ const UserSchema = new Schema
         require:true,
 
     },
-    userName: 
+    username: 
     {
         type:  String,
         require:true,
@@ -71,7 +71,7 @@ const UserSchema = new Schema
         default: Date.now()
 
     },
-
+    
     notInterestedEvent:
     {
         _id: 

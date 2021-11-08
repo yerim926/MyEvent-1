@@ -20,13 +20,7 @@ const EventSchema = new Schema
         required:true
     },
 
-    eventStartTime:
-    {
-        type:Date,
-        required:true
-    },
-
-    eventEndTime:
+    eventDate:
     {
         type:Date,
         required:true
