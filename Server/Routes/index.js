@@ -1,23 +1,17 @@
 let express = require('express');
 let router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'MyEvent', page: 'home' });
-});
+let indexController = require('../Controllers/index');
 
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'MyEvent', page: 'home' });
-});
+/* GET home page. */
+router.get('/', indexController.displayHomePage);
+
+router.get('/home', indexController.displayHomePage);
 
 /* GET Find Events page. */
-router.get('/find-events', function(req, res, next) {
-  res.render('index', { title: 'Find Events', page: 'findevents' });
-});
+router.get('/find-events', indexController.displayFindEvents);
 
 /* GET Login page. */
-router.get('/login', function(req, res, next) {
-  res.render('index', { title: 'Login', page: 'login' });
-});
+router.get('/login', indexController.displayLoginPage);
 
 module.exports = router;

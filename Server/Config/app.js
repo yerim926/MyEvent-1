@@ -33,6 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../Client')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
+// Routes
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
