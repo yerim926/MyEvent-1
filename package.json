@@ -13,6 +13,24 @@
     "passport-local-mongoose": "^6.1.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.14"
-  }
+    "node": "^17.0.1",
+    "nodemon": "^2.0.15"
+  },
+  "name": "myevent",
+  "description": "COMP-231 project.\r COMP 231, section 003, Team 2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K-TT/MyEvent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/K-TT/MyEvent/issues"
+  },
+  "homepage": "https://github.com/K-TT/MyEvent#readme"
 }
