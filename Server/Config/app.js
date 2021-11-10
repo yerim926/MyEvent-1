@@ -3,10 +3,24 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+let mongoose = require('mongoose');
 
 let indexRouter = require('../Routes/index');
 
+// App Configuration
 let app = express();
+
+// DB Configuration
+let DB = require("./db");
+
+let mongoDB = mongoose.connection;
+mongoDB.on("error", console.error.bind(console, "Connection Error:"));
+mongoDB.once("open", () => {
+  console.log('Connected to MongoDB at: ' + DB.HostName);
+});
+
+//Point mongoose to the db uri
+mongoose.connect(DB.RemoteURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // view engine setup
 app.set('views', path.join(__dirname, '../Views'));
