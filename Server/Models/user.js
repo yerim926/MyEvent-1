@@ -1,14 +1,8 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = __importDefault(require("mongoose"));
-const Schema = mongoose_1.default.Schema;
-const passport_local_mongoose_1 = __importDefault(require("passport-local-mongoose"));
-const UserSchema = new Schema
+let mongoose = require('mongoose');
+let passportLocalMongoose = require('passport-local-mongoose');
+
+let UserModel = mongoose.Schema
 ({
-    _id:Types.ObjectId,
     firstAndLastName:
     {   type:String,
         require:true,
@@ -62,26 +56,18 @@ const UserSchema = new Schema
 
     savedEvent:
     {
-        _id: 
-        {
-            type: Schema.Types.ObjectId,
-            required: true,
-            ref: "Event",
-        },
-        default: Date.now()
+
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "event",
+
 
     },
 
     notInterestedEvent:
     {
-        _id: 
-        {
-            type: Schema.Types.ObjectId,
-            required: true,
-            ref: "Event",
-        },
 
-        default: Date.now()
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "event",
 
     },
 
@@ -106,6 +92,9 @@ const UserSchema = new Schema
     collection: "users",
     timestamps: true,
 });
-UserSchema.plugin(passport_local_mongoose_1.default);
-const Model = mongoose_1.default.model("User", UserSchema);
-exports.default = Model;
+
+let options = { missingPasswordError: "Incorrect / Missing Password" };
+
+UserModel.plugin(passportLocalMongoose, options);
+
+module.exports = mongoose.model("User", UserModel);

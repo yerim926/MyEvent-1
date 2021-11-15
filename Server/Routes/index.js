@@ -8,10 +8,12 @@ router.get('/', indexController.displayHomePage);
 
 router.get('/home', indexController.displayHomePage);
 
-/* GET Find Events page. */
-router.get('/find-events', indexController.displayFindEvents);
-
 /* GET Login page. */
 router.get('/login', indexController.displayLoginPage);
+
+//TODO
+// Add login display and process
+// Add register display and process
+// Process logout
 
 module.exports = router;
