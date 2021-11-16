@@ -23,7 +23,7 @@ let flash = require('connect-flash');
 // Attach Router files
 let indexRouter = require('../Routes/index');
 let eventsRouter = require('../Routes/events');
-let savedeventsRouter = require('../Routes/savedevents');
+let eventsRouter = require('../Routes/events');
 
 // App Configuration
 let app = express();
@@ -78,7 +78,6 @@ passport.deserializeUser(User.deserializeUser());
 // Routes
 app.use('/', indexRouter);
 app.use('/events', eventsRouter);
-app.use('/savedevents',savedeventsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
