@@ -1,0 +1,55 @@
+<style>
+  #font{
+       color: #2E8BC0  ;
+       font-family: Arial, Helvetica, sans-serif;
+ 
+     }
+ 
+     #font2{
+      color: #05445E  ;
+ 
+     
+     }
+     #postion {
+     position: absolute;
+   left: 400;
+   width: 400px;
+   
+     }
+   
+ </style>
+<main class="container">
+  <!-- Message Area -->
+ 
+
+  <div class="row">
+   <h1 class id="font2">Please Log In</h1>
+      <div class="offset-md-6 col-md-4">
+          <form method="POST" autocomplete="off">
+           <div class id ="postion">
+
+              <fieldset class="form-group">
+                  <label for="userName" class id="font2">Username: </label>
+                  <input type="text" class="form-control"
+                  name="userName" placeholder="Enter username"
+                  id="userName" required autofocus>
+              </fieldset>
+
+              <fieldset class="form-group">
+                  <label for="password" class id="font2">Password: </label>
+                  <input type="password" class="form-control"
+                  name="password" placeholder="Enter password"
+                  id="password" required>
+              </fieldset>
+              <br><br>
+
+              <fieldset class="form-group text-right">
+                  <input type="submit" class="btn btn-success" value="Login">
+                  <a href="/">
+                      <input type="button" class="btn btn-warning" value="Register">
+                  </a>
+              </fieldset>
+          </form>
+      </div>
+  </div>
+</main>
