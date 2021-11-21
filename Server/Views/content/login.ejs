@@ -1,35 +1,32 @@
-<div class="container">
-  <!-- Message Area -->
- 
 
-  <div class="row">
-   <h1 class id="font2">Please Log In</h1>
-      <div class="offset-md-6 col-md-4">
-          <form method="POST" autocomplete="off">
-           <div class id ="postion">
+  <title><%= title %></title>
+  <!-- CSS Section -->
+  <link rel='stylesheet' href='/Content/login.css' />
+  <body>
+        <div class="mainWindow">
+            <h1 class id="signInTitle">Sign In</h1>
+            <div class="formWindow">
+                <form method="POST" autocomplete="off">
 
-              <fieldset class="form-group">
-                  <label for="userName" class id="font2">Username: </label>
+                <fieldset class="log-group">
+                  <label for="userName" class="lblUsername">Username: </label>
                   <input type="text" class="form-control"
                   name="userName" placeholder="Enter username"
                   id="userName" required autofocus>
-              </fieldset>
+                </fieldset>
 
-              <fieldset class="form-group">
-                  <label for="password" class id="font2">Password: </label>
+                <fieldset class="log-group">
+                  <label for="password" class="lblPassword">Password: </label>
                   <input type="password" class="form-control"
                   name="password" placeholder="Enter password"
                   id="password" required>
-              </fieldset>
-              <br><br>
+                </fieldset>
+                <br><br>
 
-              <fieldset class="form-group text-right">
-                  <input type="submit" class="btn btn-success" value="Login">
-                  <a href="/">
-                      <input type="button" class="btn btn-warning" value="Register">
-                  </a>
-              </fieldset>
-          </form>
-      </div>
-  </div>
-</div>
+                <fieldset class="log-group">
+                  <input type="submit" class="btn btnSignIn" value="Login">
+                  <input type="button" class="btn btnSignUp" value="Sign Up">
+                </fieldset>
+                </form>
+        </div>
+  </body>

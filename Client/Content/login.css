@@ -1,0 +1,56 @@
+.mainWindow {
+    height: 500px;
+    width: 700px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #FEE440;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.formWindow {
+    height: 300px;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.btnSignIn {
+    background-color: #FF865E;
+    height: 50px;
+    width: 150px;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.btnSignUp {
+    background-color: #A2D2FF;
+    height: 50px;
+    width: 150px;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 20px;
+    float: right;
+}
+
+.lblPassword {
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.lblUsername {
+    font-weight: bold;
+}
+
+body {
+    background-color: #FEF9EF; 
+    }
