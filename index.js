@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const express = require("express");
+
 /**
  * Module dependencies.
  */
@@ -88,3 +90,8 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+
+// Declaring static paths
+app.use("/js", express.static(__dirname + "/node_modules/bootstrap/dist/js")); // redirect bootstrap JS
+app.use("/css", express.static(__dirname + "/node_modules/bootstrap/dist/css")); // redirect CSS bootstrap
+app.use("/fa", express.static(__dirname + "/node_modules/@fortawesome/fontawesome-free/")); // font-awesome
