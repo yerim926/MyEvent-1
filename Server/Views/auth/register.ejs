@@ -1,3 +1,9 @@
+        <!-- Header Section -->
+<%- include('../components/header.ejs'); %>
+  
+  <!-- Main Navigation Section -->
+    <%- include('../components/main_nav.ejs'); %>
+
 <div class="container">
     <!-- Message Area -->
     <% if(messages.length > 0) {%>
@@ -76,7 +82,8 @@
                 <input type="checkbox" id="Hikers" name="Hikers" value="Hikers">
                 <label for="Hikers"> Hikers</label>
 
-                 </fieldset></div>
+                 </fieldset>
+                 </div>
 
             <fieldset class="form-group">
                     <label for="firstAndLastName" class id="font2">First and Last Name : </label>
@@ -151,3 +158,9 @@
         </div>
     </div>
 </div>
+
+<!-- Bottom Navigation Section -->
+    <%- include('../components/bottom_nav.ejs'); %>
+  
+    <!-- JavaScript Section -->
+<%- include('../components/footer.ejs'); %>

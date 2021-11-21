@@ -113,11 +113,6 @@ let UserModel = mongoose.Schema(
   );
 
 
-
-
-
-
-
 let options = { missingPasswordError: "Incorrect / Missing Password" };
 
 UserModel.plugin(passportLocalMongoose, options);

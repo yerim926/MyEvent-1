@@ -1,6 +1,7 @@
 let express = require('express');
 let router = express.Router();
 
+
 let indexController = require('../Controllers/index');
 
 /* GET home page. */
@@ -13,7 +14,17 @@ router.get('/login', indexController.displayLoginPage);
 
 //TODO
 // Add login process
-// Add register display and process
-// Process logout
+/* POST - Process login page */
+
+/* GET Register page */
+router.get('/register', indexController.displayRegisterPage);
+
+/* TODO POST - Process register page */
+router.post('/register', indexController.displayLoginPage);
+
+// TODO Process logout
+
+/* GET Saved Events page */
+router.get('/saved-events', indexController.displaySavedEventsPage);
 
 module.exports = router;

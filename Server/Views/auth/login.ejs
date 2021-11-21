@@ -1,7 +1,9 @@
-  <title><%= title %></title>
-  <!-- CSS Section -->
-  <link rel='stylesheet' href='/Content/login.css' />
-  <body>
+        <!-- Header Section -->
+<%- include('../components/header.ejs'); %>
+  
+  <!-- Main Navigation Section -->
+    <%- include('../components/main_nav.ejs'); %>
+
         <div class="mainWindow">
             <h1 class id="signInTitle">Sign In</h1>
             <div class="formWindow">
@@ -23,11 +25,14 @@
                 <br><br>
 
                 <fieldset class="log-group">
-                  <input type="button" onclick="getInputValue()" class="btn btnSignIn" value="Login">
-                  <input type="button" class="btn btnSignUp" value="Sign Up">
+                  <input type="button" onclick="getInputValue()" class="btn" id="btnSignIn" value="Login">
+                  <input type="button" class="btn" id="btnSignUp" value="Sign Up">
                 </fieldset>
                 </form>
         </div>
-        <script src="/Scripts/login.js"></script>
-  </body>
 
+<!-- Bottom Navigation Section -->
+    <%- include('../components/bottom_nav.ejs'); %>
+  
+    <!-- JavaScript Section -->
+<%- include('../components/footer.ejs'); %>
