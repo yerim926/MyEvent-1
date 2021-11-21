@@ -1,10 +1,19 @@
 {
-    username: {
-        type: String,
-        default: "",
-        trim: true,
-        required: "username is required",
-        lowercase: true
-  
-      },
+  "username": "admin",
+  "firstName": "Burhan",
+  "lastName": "Jawed",
+  "email": "example@gmail.com",
+  "city": "Toronto",
+  "birthday": "2020-01-01",
+  "events": [{
+    "eventName": "Clubbing",
+    "eventStartTime": "2021-12-25",
+    "eventEndTime": "2021-12-26",
+    "city": "Toronto",
+    "price": 20.00,
+    "description": "short description",
+    "interestedCounter": 0,
+    "tags": ["Party", "College"]
+  }],
+  "tags": ["College", "Party", "Gamers", "Pet", "Naturelovers"]
 }
