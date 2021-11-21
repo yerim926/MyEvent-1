@@ -1,4 +1,30 @@
+body {
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    color: black;
+  }
+
 /* Start Home Page */
 
 
 /* End Home Page */
+
+/* Start login page */
+#font{
+    color: #2E8BC0  ;
+  }
+
+  #font2{
+   color: #05445E  ;
+  }
+
+  #postion {
+  position: absolute;
+left: 400;
+width: 400px;
+  }
+/* End login page */
+
+/* Start Register page */
+
+  /* End Register page */

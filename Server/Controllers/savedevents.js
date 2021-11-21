@@ -1,5 +1,5 @@
 let express = require('express');
-let Event = require("../Models/event");
+let Event = require("../Models/user");
 
 /* Display Find Events Page */
 module.exports.displaySavedEventsPage = (req, res, next) => {

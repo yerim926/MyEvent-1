@@ -12,7 +12,7 @@ router.get('/home', indexController.displayHomePage);
 router.get('/login', indexController.displayLoginPage);
 
 //TODO
-// Add login display and process
+// Add login process
 // Add register display and process
 // Process logout
 

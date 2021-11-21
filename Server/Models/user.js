@@ -1,97 +1,122 @@
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
 
-let UserModel = mongoose.Schema
-({
-    firstAndLastName:
-    {   type:String,
-        require:true,
-
-    },
-    userName: 
-    {
-        type:  String,
-        require:true,
-
-    },
-    
-    email:
+// Event schema
+let eventSchema = new mongoose.Schema({
+    eventName: 
     {
         type:String,
-        require:true,
-
+        trim: true,
+        required: "event name is required"
     },
-
-    birthday:
+    eventStartTime:
     {
         type:Date,
-        require:true,
+        trim: true,
+        required: "start time is required"
     },
-
-    address:
+    eventEndTime:
     {
-        type:String,
-        require:true,
+        type:Date,
+        trim: true,
+        required: "end time is required"
     },
-
-
     city:
     {
-        type:String,
-        require:true,
-
+        type: String,
+        default: "",
+        trim: true,
+        required: "city is required"
     },
-
-    phoneNumber:
+    price:
     {
-        type:Number,
-        require:true,
-
+        type: Number,
+        required: "price is required"
     },
-
-    bio:
+    description:
     {
         type:String,
+        trim: true,
+        required: "description is required"
     },
-
-    savedEvent:
+    interestedCounter:
     {
-
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "event",
-
-
+        type: Number,
+        default: 0
     },
-
-    notInterestedEvent:
-    {
-
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "event",
-
-    },
-
-    created: {
-        type: Date,
-        default: Date.now()
-    },
-
-    updated: {
-        type: Date,
-        default: Date.now()
-    },
-
-    type: {
-            type: String,
-            enum: ["regular user", "VIP user", "event organizer"],
-            default: "regular user",
-        },
-},
-
-{
-    collection: "users",
-    timestamps: true,
+    tags: [String]
 });
+
+// User Schema
+let UserModel = mongoose.Schema(
+    {
+      username: 
+      {
+        type: String,
+        default: "",
+        trim: true,
+        required: "username is required",
+        lowercase: true
+      },
+      firstName: 
+      {
+        type: String,
+        default: "",
+        trim: true,
+        required: "first name is required"
+      },
+      lastName: 
+      {
+        type: String,
+        default: "",
+        trim: true,
+        required: "last name is required"
+      },
+      email: 
+      {
+        type: String,
+        default: "",
+        trim: true,
+        required: "email address is required",
+      },
+      city:
+      {
+        type: String,
+        default: "",
+        trim: true,
+        required: "city is required",
+      },
+      birthday: 
+      {
+        type: Date,
+        trim: true,
+        required: "birthday is required",
+      },
+      events: [eventSchema],
+      savedEvents: [eventSchema],
+      notInterestedEvents: [eventSchema],
+      tags: [String],
+      created: 
+      {
+        type: Date,
+        default: Date.now
+      },
+      update: 
+      {
+        type: Date,
+        default: Date.now
+      }
+    },
+    {
+      collection: "users",
+    }
+  );
+
+
+
+
+
+
 
 let options = { missingPasswordError: "Incorrect / Missing Password" };
 
