@@ -129,6 +129,14 @@ h1 {
     box-shadow: 2px 2px 2px #c0c0c0;
     float: left;
 }
+
+/* it fixes the photo being aligned wrong on the page in Firefox */
+@-moz-document url-prefix() { 
+    .eventPhoto {
+        float: none;
+    }
+}
+
 .eventPhoto img {
     width: 550px;
     height: 350px;
